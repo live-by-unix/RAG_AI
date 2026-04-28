@@ -1,6 +1,6 @@
 import os, json, ollama, chromadb
 from tqdm import tqdm
-DATA_PATH, DB_PATH = "/home/hugyu/ai_data_rag/pdf/arxiv/corpus", "./arxiv_vector_db"
+DATA_PATH, DB_PATH = "INSERT_HERE", "./arxiv_vector_db"
 client = chromadb.PersistentClient(path=DB_PATH)
 collection = client.get_or_create_collection(name="arxiv_papers")
 if not os.path.exists(DATA_PATH): exit()
